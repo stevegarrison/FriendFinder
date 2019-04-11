@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Friend Finder!</title>
+    <!-- Latest compiled and minified CSS & JS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-primary">
+    <div class="container">
+        <div class="row">
+            <h1 class="bg-primary mt-2 mb-1 p-5 text-center text-light col-md-12" id="friend-header"><i
+                    class="mr-5 fas fa-laugh-beam" style="color:rgb(251, 255, 0);"></i>Friends Finder!
+            </h1>
+        </div>
+    </div>
+
+    <!-- Survey -->
+    <div class="container mt-2">
+        <div class="row">
+            <div class="text-center text-light p-2 col-md-12 pr-5 pl-5 pt-3 pb-3 mb-3 rounded" id="survey-bg">
+                <div class="bg-light text-dark mt-2 mb-2 pt-3 pb-2 rounded">Each question is answered on a scale of 5
+                    (strongly
+                    disagree/not applicable) to 5 (strongly agree/very applicable)
+                    <hr>
+                    <!-- Custom CSS for radio buttons container -->
+
+                    <div class="row mr-5 ml-5 mt-2 mb-2">
+                        <div class="input-group col-md-6">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">Name</span>
+                            </div>
+                            <input type="text" class="form-control" placeholder="Name" aria-label="Name"
+                                aria-describedby="basic-addon1" id="userName">
+                        </div>
+                        <div class="input-group col-md-6">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">Photo</span>
+                            </div>
+                            <input type="text" class="form-control" placeholder="Photo URL" aria-label="Photo"
+                                aria-describedby="basic-addon1" id="userPhoto">
+                        </div>
+                    </div>
+                    <hr>
+
+                    <form id="form">
+                        <!-- Question 1-->
+                        <div class="text-center" id="question-1"> How agressive are you?
+                            <div class="custom-control custom-radio custom-control-inline ml-3">
+                                <input type="radio" class="custom-control-input" id="question1-1" name="question1"
+                                    value=1>
+                                <label class="custom-control-label" for="question1-1">1</label>
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="question1-2" name="question1"
+                                    value=2>
+                                <label class="custom-control-label" for="question1-2">2</label>
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="question1-3" name="question1"
+                                    value=3>
+                                <label class="custom-control-label" for="question1-3">3</label>
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="question1-4" name="question1"
+                                    value=4>
+                                <label class="custom-control-label" for="question1-4">4</label>
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="question1-5" name="question1"
+                                    value=5>
+                                <label class="custom-control-label" for="question1-5">5</label>
+                            </div>
+                        </div>
+                        <hr>
+
+                        <!-- Question 2-->
+                        <div class="text-center"> How much do you like egg rolls?
+                            <div class="custom-control custom-radio custom-control-inline ml-3">
+                                <input type="radio" class="custom-control-input" id="question2-1" name="question2"
+                                    value=1>
+                                <label class="custom-control-label" for="question2-1">1</label>
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="question2-2" name="question2"
+                                    value=2>
+                                <label class="custom-control-label" for="question2-2">2</label>
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="question2-3" name="question2"
+                                    value=3>
+                                <label class="custom-control-label" for="question2-3">3</label>
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="question2-4" name="question2"
+                                    value=4>
+                                <label class="custom-control-label" for="question2-4">4</label>
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="question2-5" name="question2"
+                                    value=5>
+                                <label class="custom-control-label" for="question2-5">5</label>
+                            </div>
+                        </div>
+                        <hr>
+
+                        <!-- Question 3-->
+                        <div class="text-center"> How much do you like sports?
+                            <div class="custom-control custom-radio custom-control-inline ml-3">
+                                <input type="radio" class="custom-control-input" id="question3-1" name="question3"
+                                    value=1>
+                                <label class="custom-control-label" for="question3-1">1</label>
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="question3-2" name="question3"
+                                    value=2>
+                                <label class="custom-control-label" for="question3-2">2</label>
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="question3-3" name="question3"
+                                    value=3>
+                                <label class="custom-control-label" for="question3-3">3</label>
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="question3-4" name="question3"
+                                    value=4>
+                                <label class="custom-control-label" for="question3-4">4</label>
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="question3-5" name="question3"
+                                    value=5>
+                                <label class="custom-control-label" for="question3-5">5</label>
+                            </div>
+                        </div>
+                        <hr>
+
+                        <!-- Question 4-->
+                        <div class="text-center"> How bad do you smell?
+                            <div class="custom-control custom-radio custom-control-inline ml-3">
+                                <input type="radio" class="custom-control-input" id="question4-1" name="question4"
+                                    value=1>
+                                <label class="custom-control-label" for="question4-1">1</label>
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="question4-2" name="question4"
+                                    value=2>
+                                <label class="custom-control-label" for="question4-2">2</label>
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="question4-3" name="question4"
+                                    value=3>
+                                <label class="custom-control-label" for="question4-3">3</label>
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="question4-4" name="question4"
+                                    value=4>
+                                <label class="custom-control-label" for="question4-4">4</label>
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="question4-5" name="question4"
+                                    value=5>
+                                <label class="custom-control-label" for="question4-5">5</label>
+                            </div>
+                        </div>
+                        <hr>
+
+                        <!-- Question 5-->
+                        <div class="text-center"> How much do you like cheese?
+                            <div class="custom-control custom-radio custom-control-inline ml-3">
+                                <input type="radio" class="custom-control-input" id="question5-1" name="question5"
+                                    value=1>
+                                <label class="custom-control-label" for="question5-1">1</label>
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="question5-2" name="question5"
+                                    value=2>
+                                <label class="custom-control-label" for="question5-2">2</label>
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="question5-3" name="question5"
+                                    value=3>
+                                <label class="custom-control-label" for="question5-3">3</label>
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="question5-4" name="question5"
+                                    value=4>
+                                <label class="custom-control-label" for="question5-4">4</label>
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="question5-5" name="question5"
+                                    value=5>
+                                <label class="custom-control-label" for="question5-5">5</label>
+                            </div>
+                        </div>
+                        <hr>
+
+                        <!-- Question 6-->
+                        <div class="text-center"> How long are your toe nails?
+                            <div class="custom-control custom-radio custom-control-inline ml-3">
+                                <input type="radio" class="custom-control-input" id="question6-1" name="question6"
+                                    value=1>
+                                <label class="custom-control-label" for="question6-1">1</label>
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="question6-2" name="question6"
+                                    value=2>
+                                <label class="custom-control-label" for="question6-2">2</label>
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="question6-3" name="question6"
+                                    value=3>
+                                <label class="custom-control-label" for="question6-3">3</label>
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="question6-4" name="question6"
+                                    value=4>
+                                <label class="custom-control-label" for="question6-4">4</label>
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="question6-5" name="question6"
+                                    value=5>
+                                <label class="custom-control-label" for="question6-5">5</label>
+                            </div>
+                        </div>
+                        <hr>
+
+                        <!-- Question 7-->
+                        <div class="text-center"> How much do you like math?
+                            <div class="custom-control custom-radio custom-control-inline ml-3">
+                                <input type="radio" class="custom-control-input" id="question7-1" name="question7"
+                                    value=1>
+                                <label class="custom-control-label" for="question7-1">1</label>
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="question7-2" name="question7"
+                                    value=2>
+                                <label class="custom-control-label" for="question7-2">2</label>
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="question7-3" name="question7"
+                                    value=3>
+                                <label class="custom-control-label" for="question7-3">3</label>
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="question7-4" name="question7"
+                                    value=4>
+                                <label class="custom-control-label" for="question7-4">4</label>
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="question7-5" name="question7"
+                                    value=5>
+                                <label class="custom-control-label" for="question7-5">5</label>
+                            </div>
+                        </div>
+                        <hr>
+
+                        <!-- Question 8-->
+                        <div class="text-center"> How much do you like to cook?
+                            <div class="custom-control custom-radio custom-control-inline ml-3">
+                                <input type="radio" class="custom-control-input" id="question8-1" name="question8"
+                                    value=1>
+                                <label class="custom-control-label" for="question8-1">1</label>
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="question8-2" name="question8"
+                                    value=2>
+                                <label class="custom-control-label" for="question8-2">2</label>
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="question8-3" name="question8"
+                                    value=3>
+                                <label class="custom-control-label" for="question8-3">3</label>
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="question8-4" name="question8"
+                                    value=4>
+                                <label class="custom-control-label" for="question8-4">4</label>
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="question8-5" name="question8"
+                                    value=5>
+                                <label class="custom-control-label" for="question8-5">5</label>
+                            </div>
+                        </div>
+                        <hr>
+
+                        <!-- Question 9-->
+                        <div class="text-center"> How much do you love to code?
+                            <div class="custom-control custom-radio custom-control-inline ml-3">
+                                <input type="radio" class="custom-control-input" id="question9-1" name="question9"
+                                    value=1>
+                                <label class="custom-control-label" for="question9-1">1</label>
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="question9-2" name="question9"
+                                    value=2>
+                                <label class="custom-control-label" for="question9-2">2</label>
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="question9-3" name="question9"
+                                    value=3>
+                                <label class="custom-control-label" for="question9-3">3</label>
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="question9-4" name="question9"
+                                    value=4>
+                                <label class="custom-control-label" for="question9-4">4</label>
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="question9-5" name="question9"
+                                    value=5>
+                                <label class="custom-control-label" for="question9-5">5</label>
+                            </div>
+                        </div>
+                        <hr>
+
+                        <!-- Question 10-->
+                        <div class="text-center"> How much do you like pizza?
+                            <div class="custom-control custom-radio custom-control-inline ml-3">
+                                <input type="radio" class="custom-control-input" id="question10-1" name="question10"
+                                    value=1>
+                                <label class="custom-control-label" for="question10-1">1</label>
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="question10-2" name="question10"
+                                    value=2>
+                                <label class="custom-control-label" for="question10-2">2</label>
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="question10-3" name="question10"
+                                    value=3>
+                                <label class="custom-control-label" for="question10-3">3</label>
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="question10-4" name="question10"
+                                    value=4>
+                                <label class="custom-control-label" for="question10-4">4</label>
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="question10-5" name="question10"
+                                    value=5>
+                                <label class="custom-control-label" for="question10-5">5</label>
+                            </div>
+                        </div>
+                        <hr>
+                    </form>
+                    <button type="button" class="btn btn-success m-3 pr-5 pl-5" id="submit-btn">Submit</button>
+                    <button type="button" class="btn btn-danger m-3 pr-5 pl-5" id="clear-btn">Clear</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="modal1" class="modal">
+            <div class="modal-content">
+                <h4>Closest Friend Match</h4>
+                <div class="divider"></div>
+                <h5 id="userMatch"></h5>
+                <img id="userMatchImage" class="materialboxed" width="650" src="">
+            </div>
+            <div class="modal-footer">
+                <a href="/survey" class="modal-action modal-close waves-effect waves-green btn-flat">Fill Again!</a>
+            </div>
+        </div>
+
+    <script>
+
+        // Globals
+        var diff = 0;
+
+        var question1 = document.getElementsByName("question1");
+        var question2 = document.getElementsByName("question2");
+        var question3 = document.getElementsByName("question3");
+        var question4 = document.getElementsByName("question4");
+        var question5 = document.getElementsByName("question5");
+        var question6 = document.getElementsByName("question6");
+        var question7 = document.getElementsByName("question7");
+        var question8 = document.getElementsByName("question8");
+        var question9 = document.getElementsByName("question9");
+        var question10 = document.getElementsByName("question10");
+
+        //Push user inputs here
+        var answers = [];
+        var totalDiff = [];
+
+
+        $("#submit-btn").on("click", function () {
+            event.preventDefault();
+            console.log("Submit");
+
+            // Capture Question 1 value
+            for (var i = 0; i < question1.length; i++) {
+                if (question1[i].checked === true) {
+                    question1 = question1[i].defaultValue;
+                    //Push answers into array
+                    answers.push(parseInt(question1));
+                    break;
+                } else { }
+            }
+
+            // Capture Question 2 value
+            for (var i = 0; i < question2.length; i++) {
+                if (question2[i].checked === true) {
+                    question2 = question2[i].defaultValue;
+                    //Push answers into array
+                    answers.push(parseInt(question2));
+                    break;
+                } else { }
+            }
+
+            // Capture Question 3 value
+            for (var i = 0; i < question3.length; i++) {
+                if (question3[i].checked === true) {
+                    question3 = question3[i].defaultValue;
+                    //Push answers into array
+                    answers.push(parseInt(question3));
+                    break;
+                } else { }
+            }
+
+            // Capture Question 4 value
+            for (var i = 0; i < question4.length; i++) {
+                if (question4[i].checked === true) {
+                    question4 = question4[i].defaultValue;
+                    //Push answers into array
+                    answers.push(parseInt(question4));
+                    break;
+                } else { }
+            }
+
+            // Capture Question 5 value
+            for (var i = 0; i < question5.length; i++) {
+                if (question5[i].checked === true) {
+                    question5 = question5[i].defaultValue;
+                    //Push answers into array
+                    answers.push(parseInt(question5));
+                    break;
+                } else { }
+            }
+
+            // Capture Question 6 value
+            for (var i = 0; i < question6.length; i++) {
+                if (question6[i].checked === true) {
+                    question6 = question6[i].defaultValue;
+                    //Push answers into array
+                    answers.push(parseInt(question6));
+                    break;
+                } else { }
+            }
+
+            // Capture Question 7 value
+            for (var i = 0; i < question7.length; i++) {
+                if (question7[i].checked === true) {
+                    question7 = question7[i].defaultValue;
+                    //Push answers into array
+                    answers.push(parseInt(question7));
+                    break;
+                } else { }
+            }
+
+            // Capture Question 8 value
+            for (var i = 0; i < question8.length; i++) {
+                if (question8[i].checked === true) {
+                    question8 = question8[i].defaultValue;
+                    //Push answers into array
+                    answers.push(parseInt(question8));
+                    break;
+                } else { }
+            }
+
+            // Capture Question 9 value
+            for (var i = 0; i < question9.length; i++) {
+                if (question9[i].checked === true) {
+                    question9 = question9[i].defaultValue;
+                    //Push answers into array
+                    answers.push(parseInt(question9));
+                    break;
+                } else { }
+            }
+
+            // Capture Question 10 value
+            for (var i = 0; i < question10.length; i++) {
+                if (question10[i].checked === true) {
+                    question10 = question10[i].defaultValue;
+                    //Push answers into array
+                    answers.push(parseInt(question10));
+                    break;
+                } else { }
+            }
+            var userName = $("#userName").val().trim();
+            var userPhoto = $("#userPhoto").val().trim();
+
+            var userInput = {
+				name: userName,
+				photo: userPhoto,
+				scores:[
+                    question1,
+                    question2,
+                    question3,
+                    question4,
+                    question5,
+                    question6,
+                    question7,
+                    question8,
+                    question9,
+                    question10
+				]
+            };
+
+            console.log(userInput);
+            
+            $.post("/api/friends", userInput, function(data){
+                console.log(data);
+
+      			// Set the name and image values of friend match
+      			$('#userMatch').html(data.matchName);
+		    	$("#userMatchImage").attr("src", data.matchImage);
+		    	// Pop open the modal dialog
+      			$('#modal1').modal();
+            });
+
+        })
+
+        $("#clear-btn").on("click", function () {
+            location.reload();
+        })
+    </script>
+</body>
+
+</html>
